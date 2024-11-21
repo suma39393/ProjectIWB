@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <title>الكتب</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="myFunctions.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Books</h1>
+        <nav>
+            <a href="home.html">home</a>
+            <a href="AboutUs.html"> About us</a>
+            <a href="Books.html">Books</a>
+        </nav>
+    </header>
+    <main>
+        <!-- عرض الكتب في جدول -->
+        <section>
+            <h2>قائمة الكتب</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>عنوان الكتاب</th>
+                        <th>السعر</th>
+                        <th>رمز الكتاب (ISBN)</th>
+                        <th>إظهار التفاصيل</th>
+                        <th>إضافة إلى السلة</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ألف ليلة وليلة</td>
+                        <td>25000 ل.س</td>
+                        <td>978-9770916738</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart('ألف ليلة وليلة', 25000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images\الف ليلة وليلة.jpg" alt="غلاف الكتاب -   الف ليلة وليلة" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> دار المعارف<br>
+                            <strong>التصنيف:</strong> قصص شعبية<br>
+                            <strong>ملخص:</strong> مجموعة من القصص الشعبية من الشرق الأوسط.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>موسم الهجرة إلى الشمال</td>
+                        <td>12000 ل.س</td>
+                        <td>978-9953891718</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart('موسم الهجرة إلى الشمال', 12000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images\موسم الهجرة الى الشمال.jpg" alt="غلاف الكتاب -   موسم الهجرة الى الشمال" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> المؤسسة العربية للدراسات<br>
+                            <strong>التصنيف:</strong> رواية<br>
+                            <strong>ملخص:</strong> رواية تتناول قضايا الهوية والاختلاف الثقافي.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> أصل الأنواع</td>
+                        <td>15000 ل.س</td>
+                        <td>978-1503250220</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart('  أصل الأنواع  ', 15000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images\اصل الانواع.jpg" alt="غلاف الكتاب -   اصل الانواع" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> دار المعارف <br>
+                            <strong>التصنيف:</strong> علم الأحياء<br>
+                            <strong>ملخص:</strong> تحليل أساسي لنظرية التطور وكيفية تفسير تنوع الحياة على الأرض.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> قواعد العشق الأربعون </td>
+                        <td>22000 ل.س</td>
+                        <td>978-0520270709</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart('  قواعد العشق الأربعون ', 22000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images\قواعد العشق الاربعون.jpg" alt="غلاف الكتاب - قواعد العشق الاربعون  " style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> منشورات الجمل <br>
+                            <strong>التصنيف:</strong> أدب صوفي<br>
+                            <strong>ملخص:</strong> استكشاف عميق للحب والعلاقات من خلال حياة جلال الدين الرومي وشمس التبريزي.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>نظرية الفوضى</td>
+                        <td>27000 ل.س</td>
+                        <td>978-0061137312</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart('  نظرية الفوضى ', 27000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images\نظرية الفوضى.jpg" alt="غلاف الكتاب - نظرية الفوضى  " style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> دار الفكر العربي <br>
+                            <strong>التصنيف:</strong> علوم<br>
+                            <strong>ملخص:</strong> يناقش الكتاب نظرية الفوضى وتأثيرها على العلم الحديث.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> التفكير السريع والبطيء</td>
+                        <td>30000 ل.س</td>
+                        <td>978-0374533557</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart('التفكير السريع والبطيء ', 30000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images\التفكير السريع والبطيئ.jpg" alt="غلاف الكتاب - التفكير السريع والبطيئ  " style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> مكتبة جرير <br>
+                            <strong>التصنيف:</strong> علم النفس<br>
+                            <strong>ملخص:</strong> يناقش الكتاب كيفية عمل الدماغ البشري بين التفكير العاطفي والعقلاني.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> رواية الخيميائي</td>
+                        <td>20000 ل.س</td>
+                        <td>978-0061122415</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart('  رواية الخيميائي ', 20000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images\ألخيميائي.jpg" alt="غلاف الكتاب -   الخيميائي" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> دار الساقي<br>
+                            <strong>التصنيف:</strong> رواية فلسفية<br>
+                            <strong>ملخص:</strong> قصة ملهمة عن شاب يسافر بحثاً عن حلمه ومصيره في الصحراء .
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> الشيطان والانسة بريم</td>
+                        <td>26000 ل.س</td>
+                        <td>978-0068795415</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart('   الشيطان والانسة بريم ', 26000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images\الشيطان والانسة بريم.jpg" alt="غلاف الكتاب - الشيطان والآنسة بريم" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> مكتبة نور <br>
+                            <strong>التصنيف:</strong> رواية <br>
+                            <strong>ملخص:</strong> قصة ملهمة عن فتاة تسافر بحثاً عن الحقيقة المصير في قرية نائية .
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> السر </td>
+                        <td>29000 ل.س</td>
+                        <td>978-009058711</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart('   السر   ', 29000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images\السر.jpg" alt="غلاف الكتاب -   السر" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> مكتبة نور <br>
+                            <strong>التصنيف:</strong> رواية <br>
+                            <strong>ملخص:</strong> قصة ملهمة عن فتاة تسافر بحثاً عن الحقيقة المصير في قرية نائية .
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+        <!-- سلة الشراء -->
+        <section class="cart">
+            <h2>سلة الشراء</h2>
+            <ul id="cartItems">
+
+            </ul>
+            <p id="totalPrice">المجموع الكلي: 0 ل.س</p>
+            <!-- نموذج إدخال معلومات المستخدم -->
+            <form onsubmit="return validateCartForm()">
+                <h3>إدخال معلومات الشراء</h3>
+                <label for="name">الاسم الكامل:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="id">الرقم الوطني:</label>
+                <input type="text" id="id" name="id" required>
+                <label for="dob">تاريخ الولادة:</label>
+                <input type="date" id="dob" name="dob" required>
+                <label for="phone">رقم الموبايل:</label>
+                <input type="text" id="phone" name="phone" required>
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">إتمام الشراء</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>عن الموقع</h3>
+                <p>نحن مكتبة متخصصة في توفير تجربة فريدة لعشاق القراءة، حيث نقدم مجموعة متميزة من الكتب التي تلبي اهتمامات القراء العرب والعالميين. نسعى دائمًا لتوفير أفضل الإصدارات الأدبية والعلمية والروايات العالمية والمحلية، مع الحرص على تقديم محتوى يلهم
+                    الفكر وينير العقول. رؤيتنا هي أن نكون الوجهة الأولى لكل من يبحث عن المعرفة، الإبداع، والمتعة في عالم القراءة.</p>
+            </div>
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="home.html">home</a></li>
+                    <li><a href="AboutUs.html">about us </a></li>
+                    <li><a href="AboutUs.html">contact us </a></li>
+                    <li><a href="Books.html">store</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>تابعنا</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-bottom">جميع الحقوق محفوظة &copy; 2024 | تصميم الموقع بواسطة فريقنا</p>
+    </footer>
+
+</body>
+
+</html>
